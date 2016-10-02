@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery library for Bootstrap-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!--link to my Javascript doc-->
+        <script src="myscript.js"></script>
+        
+        <meta charset="utf-8">
+        
+        <title>WeDo</title>
+    </head>
+    
+    <body>
+        <!--Top nav-->
+        <nav nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="row">
+                    <!--Space for back button. Leave empty for now-->
+                    <div class="col-xs-2">back</div>
+                    <!--List Title-->
+                    <div class="col-xs-8">
+                        <h1>Home Chores</h1>
+                    </div>
+                    <!--Add button-->
+                    <div class="col-xs-2">
+                        <button type="button" class="btn btn-primary btn-xs" onclick="addItem()">Add</button>
+                    </div>
+                </div>    
+            </div>
+        </nav>
+        
+        <!--List members bar-->
+        <div class="container-fluid" id="listMembersBar">
+            <div class="row">
+                <div class="col-xs-2">
+                    <span class="badge">A</span>
+                </div>
+                <div class="col-xs-2">
+                    <span class="badge">B</span>
+                </div>
+                <div class="col-xs-2">
+                    <span class="badge">C</span>
+                </div>
+                <div class="col-xs-2">
+                    <span class="badge">D</span>
+                </div>
+            </div>   
+        </div>
+        
+        <!--Not completed items-->
+        <!--Each list item has a delete button that when clicked removed the item (parent) from the list-->
+        <div class="list-group" id="notCompletedItems">
+        </div>
+        
+        <!--Completed items-->
+        <div class="list-group" id="completedItems">
+        </div>
+        
+    </body>
+</html>
