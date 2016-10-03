@@ -1,21 +1,29 @@
 //list item template
 var itemTemplate = 
-    '<a href="#" class="list-group-item" id="a href item">List item 1 \
+    '<a href="#" class="list-group-item" id=null>List item 1 \
         <span class="badge">A</span> \
-        <button onclick="deleteItem()">Delete</button> \
-     </a>';
+        <button class="delete-button" onclick="deleteItem(this)">Delete</button</a>';
+var newItemId=1;
 
 //addItem function
 var addItem = function () {
-    var list = $("#notCompletedItems");
-    var newItem = $(itemTemplate);
+    //TODO take user input for content of list item 
+        //set string to varible to alter inner HTML of list item?
+    var list=$("#notCompletedItems");
+    var newItem=$(itemTemplate); 
     list.append(newItem);
-}
-
-//Delete Item function will remove an item from the display when a user clicks the Delete button
-var deleteItem = function () {
-    console.log("Now running the deleteItem function!");
-    var listItem = $(".badge").parent().css({"color": "red", "border": "2px solid red"});
+    //increment newItemId for next item created
+    newItemId++;
 };
 
-$(document).ready(addItem)
+//Delete Item function will remove an item from the display when a user clicks the Delete button
+//$(document).click(function(event) {
+//    if ($(event.target).hasClass("delete-button")){
+//        $(event.target).parent().remove();
+//    }
+//});
+
+var deleteItem = function(element){
+    $(element).parent().remove();
+}
+
