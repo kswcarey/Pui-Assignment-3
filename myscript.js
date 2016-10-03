@@ -1,29 +1,29 @@
 //list item template
 var itemTemplate = 
-    '<a href="#" class="list-group-item" id=null>List item 1 \
+    '<a href="#" class="list-group-item"> \
+        <input type="checkbox" onclick="completeItem(this)" value=""> \
         <span class="badge">A</span> \
-        <button class="delete-button" onclick="deleteItem(this)">Delete</button</a>';
-var newItemId=1;
+        <button class="delete-button" onclick="deleteItem(this)">Delete</button></a>';
 
 //addItem function
 var addItem = function () {
-    //TODO take user input for content of list item 
-        //set string to varible to alter inner HTML of list item?
     var list=$("#notCompletedItems");
     var newItem=$(itemTemplate); 
-    list.append(newItem);
-    //increment newItemId for next item created
-    newItemId++;
+    var userInput = document.getElementById("text-input").value;
+    //put text input into the innerHTML of the newItem
+    newItem.append(userInput);
+    list.prepend(newItem);
+    //TODO clear the text input box
+    document.getElementById("text-input").value = '';
 };
-
-//Delete Item function will remove an item from the display when a user clicks the Delete button
-//$(document).click(function(event) {
-//    if ($(event.target).hasClass("delete-button")){
-//        $(event.target).parent().remove();
-//    }
-//});
 
 var deleteItem = function(element){
     $(element).parent().remove();
+}
+
+var completeItem = function(checked) {
+    var doneItem = $(checked).parent();
+    var done =$("#completedItems");
+    done.append(doneItem);
 }
 

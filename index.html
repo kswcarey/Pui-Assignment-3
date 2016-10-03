@@ -29,10 +29,7 @@
                     <div class="col-xs-8">
                         <h1>Home Chores</h1>
                     </div>
-                    <!--Add button-->
-                    <div class="col-xs-2">
-                        <button type="button" class="btn btn-primary btn-xs" onclick="addItem()">Add</button>
-                    </div>
+                    
                 </div>    
             </div>
         </nav>
@@ -55,13 +52,34 @@
             </div>   
         </div>
         
+        <!--Add items bar-->
+        <div class="container-fluid" id="listMembersBar">
+            <div class="col-xs-10">
+                <input class="form-control input-sm" id="text-input" type="text"/>
+            </div>
+            <!--Add button-->
+            <div class="col-xs-2">
+                <button type="button" class="btn btn-primary btn-xs" onclick="addItem()">Add</button>
+            </div>
+        </div>
+        
         <!--Not completed items-->
         <!--Each list item has a delete button that when clicked removed the item (parent) from the list-->
         <div class="list-group" id="notCompletedItems">
+<!--
+            <div class="col-xs-12">
+                <h4>To Do</h4>
+            </div>
+-->
         </div>
         
         <!--Completed items-->
         <div class="list-group" id="completedItems">
+<!--
+            <div class="col-xs-12">
+                <h4>Done</h4>
+            </div>
+-->
         </div>
         
     </body>
