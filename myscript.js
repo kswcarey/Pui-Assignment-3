@@ -12,7 +12,7 @@ var addItem = function () {
     var userInput = document.getElementById("text-input").value;
     //put text input into the innerHTML of the newItem
     newItem.append(userInput);
-    list.prepend(newItem);
+    list.append(newItem);
     //TODO clear the text input box
     document.getElementById("text-input").value = '';
 };

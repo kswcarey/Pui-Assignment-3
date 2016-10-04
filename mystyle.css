@@ -1,0 +1,93 @@
+/*H1 style*/
+h1 {
+    font-family: "Verdana";
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*H4 style*/
+h4 {
+    font-family: "Verdana";
+    font-size: 14px; 
+    font-weight: bold;
+    text-align: left
+    
+}
+
+/*Badges style*/
+span.badge {
+    font-family: "Verdana";
+    font-size: 14px;
+    font-weight:100;
+}
+
+/*Nav Bar style*/
+nav {
+    background: -webkit-linear-gradient(bottom right, #ff751a, #ffcc00);
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*List Members Bar style*/
+#listMembersBar {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/*Add Item Bar style*/
+    /*Text input*/
+    #text-input {
+        float: left;
+    }
+
+    /*Add Button style*/
+    #add-button {
+        background-color: skyblue; 
+        color: white;
+        padding: 5px 15px;
+        border-radius: 4px;
+        font-family: "Verdana";
+        font-size: 14px;
+    }
+
+/*List Group style*/
+div.list-group {
+    min-height: 4em;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Verdana";
+    font-size: 14px;
+}
+
+/*List Item style*/
+a.list-group-item {
+    min-height: 4em;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+    /*Delete Button style*/
+    .delete-button {
+        margin: 0 10px 0 10px;
+        padding: 2px 5px;
+        float: right;
+        background-color: white;
+        color: dimgray;
+        border: 2px solid gray;
+        border-radius: 4px;
+        font-family: "Verdana";
+        font-size: 14px;
+    }
+
+    .delete-button:hover {
+        background-color: red;
+        border: 2px solid red;
+        color: white;
+        -webkit-transition-duration: 0.6s;
+        transition-duration: 0.6s;
+    }
