@@ -18,23 +18,25 @@
         
         <meta charset="utf-8">
         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>WeDo</title>
     </head>
     
     <body>
         <!--Top nav-->
         <nav nav class="navbar navbar-default">
+            <!--List Title-->
+            <div class="col-xs-12">
+                <h1 class="title">Home Chores</h1>
+            </div>
             <div class="container-fluid">
                 <div class="row">
                     <!--Space for back button. Leave empty for now-->
-                    <a href="javascript:void(0)" class="back">&#x276e;</a>
+                        <!--<a href="javascript:void(0)" class="back">&#x276e;</a>-->
                     <!--Button to open add items overlay-->
                     <button id="open-overlay" class="open-overlay" onclick="openOverlay()">Add Item</button>
                 </div> 
-                <!--List Title-->
-                <div class="col-xs-12">
-                    <h1>Home Chores</h1>
-                </div>
             </div>
         </nav>
         
@@ -73,36 +75,48 @@
         <!--Add items overlay-->
         <div id="add-item-overlay" class="overlay">
             <!-- Button to close the overlay navigation -->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</a>
-            <!--Add items bar-->
-            <div class="container-fluid" id="addItemsBar">
-                <div class="col-xs-9">
-                    <input class="form-control input-sm" id="text-input" type="text"/>
-                </div>
-            </div>
-            <!--Choose Task Owner bar-->
-            <!--set up on click function to add the clicked badge to the new item-->
-            <div id="task-owner-bar" class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <button id="A" class="badge" onclick="selectBadge(this)">A</button>
-                    </div>
-                    <div class="col-xs-2">
-                        <button id="B" class="badge" onclick="selectBadge(this)">B</button>
-                    </div>
-                    <div class="col-xs-2">
-                        <button id="C" class="badge" onclick="selectBadge(this)">C</button>
-                    </div>
-                    <div class="col-xs-2">
-                        <button id="D" class="badge" onclick="selectBadge(this)">D</button>
-                    </div>
-                </div>
-            </div>
-            <!--Add button-->
-            <div class="container-fluid">
-                <button id="add-button" type="button" class="btn btn-primary btn-xs" onclick="addItem()">Add</button>
-            </div>
+            <span href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</span>
             
+<!--
+            Toaster notification for item added
+            <div class="container-fluid" id="toaster">
+                Your new to-do was added to the Home Chores list!
+            </div>
+-->
+            
+            <!--Add items bar-->
+            <div class="container-fluid" id="addItemsElements">
+                <div class="col-xs-12">
+                    <h4 id="addItemPrompt">What else do we need to do?</h4>
+                </div>
+                <div class="container-fluid" id="addItemsBar">
+                    <div class="col-xs-12">
+                        <input class="form-control input-l" id="text-input" type="text"/>
+                    </div>
+                </div>
+                <!--Choose Task Owner bar-->
+                <!--set up on click function to add the clicked badge to the new item-->
+                <div id="task-owner-bar" class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <button id="A" class="badge" onclick="selectBadge(this)">A</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button id="B" class="badge" onclick="selectBadge(this)">B</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button id="C" class="badge" onclick="selectBadge(this)">C</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button id="D" class="badge" onclick="selectBadge(this)">D</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Add button-->
+                <div class="container-fluid">
+                    <button id="add-button" type="button" class="btn btn-primary btn-xs" onclick="addItem()">Add</button>
+                </div>
+            </div>
         </div>
         
         

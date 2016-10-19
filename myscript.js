@@ -25,7 +25,7 @@ var addItem = function () {
 };
 
 var deleteItem = function(element){
-    $(element).parent().remove();
+    $(element).parent().fadeOut("slow");
 }
 
 var completeItem = function(checked) {
@@ -67,8 +67,8 @@ var resetBadges = function(){
     $(".badge.badge-is-enabled").removeClass("badge-is-enabled");
 }
 
-//TODO create confirmation message when new item has been added
-var toaster = function(){
-    //prepend overlay div with confirmation message
-    //fade in and fade out
-}
+////TODO create confirmation message when new item has been added
+//var toaster = function(){
+//    document.getElementById("toaster").style.height = "100%";
+//    
+//}

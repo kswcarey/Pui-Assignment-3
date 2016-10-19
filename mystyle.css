@@ -15,7 +15,11 @@ h4 {
 }
 
 /*Badges style*/
-span.badge {
+button.badge {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
     font-family: "Verdana";
     font-size: 14px;
     font-weight:100;
@@ -23,12 +27,37 @@ span.badge {
 
 /*Nav Bar style*/
 nav {
-    background: -webkit-linear-gradient(bottom right, #ff751a, #ffcc00);
+    background: -webkit-linear-gradient(bottom right, #ff751a, #ffcc00); /* gradient fades from yellow to deep orange */
     color: white;
     position: sticky;
     top: 0;
     width: 100%;
     margin-bottom: 10px;
+}
+
+/*List title style*/
+h1.title {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*back button style*/
+a.back {
+    color: white;
+}
+
+/*Add Item button which opens overlay style*/
+#open-overlay {
+    float: right;
+    background-color: white; 
+    color: darkorange;
+    border: 2px solid white;
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-family: "Verdana";
+    font-size: 14px;
 }
 
 /*List Members Bar style*/
@@ -37,20 +66,58 @@ nav {
     margin-left: 20px;
 }
 
+/*Badges individual colors*/
+#A {
+    background-color: #da88e0;
+    border-color: #da88e0;
+}
+#B {
+    background-color: #88c3e0;
+    border-color; #88c3e0;
+}
+#C {
+    background-color: #85bf56;
+    border-color: #85bf56;
+}
+#D {
+    background-color: #6676d1;
+    border-color: #6676d1;
+}
+
 /*Add Item Bar style*/
+#addItemsElements {
+    margin-top: 125px;
+}    
+
     /*Text input*/
     #text-input {
         float: left;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /*Badges bar on add item overlay*/
+    #task-owner-bar {
+        margin-top: 10px;
+        margin-bottom: 25px;
     }
 
     /*Add Button style*/
     #add-button {
-        background-color: skyblue; 
-        color: white;
-        padding: 5px 15px;
+        background-color: white;
+        color: #4fb747;
+        border: 2px solid #4fb747; /* green */
         border-radius: 4px;
+        padding: 5px 30px;
         font-family: "Verdana";
         font-size: 14px;
+    }
+
+    #add-button:active {
+        background-color: #4fb747; /* green */
+        border: 2px solid #4fb747; /* green */
+        color: white;
     }
 
 /*List Group style*/
@@ -84,12 +151,10 @@ a.list-group-item {
         font-size: 14px;
     }
 
-    .delete-button:hover {
-        background-color: red;
-        border: 2px solid red;
+    .delete-button:active {
+        background-color: #e04b2a; /* red */
+        border: 2px solid #e04b2a; /* red */
         color: white;
-        -webkit-transition-duration: 0.6s;
-        transition-duration: 0.6s;
     }
 
 /*Overlay styling*/
@@ -100,6 +165,7 @@ a.list-group-item {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
+    float: right;
     background-color: white; /* white color */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s;
@@ -110,6 +176,16 @@ a.list-group-item {
         position: absolute;
         top: 20px;
         right: 45px;
-        font-size: 60px;
+        font-size: 40px;
         color: darkgray;
         text-decoration:none;
+    }
+    
+/*
+#toaster {
+    position: fixed;
+    height: 0;
+    width: 100%;
+    background-color: #b3efc2;
+    transition: .7s;
+}*/
