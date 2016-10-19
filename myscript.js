@@ -22,10 +22,11 @@ var addItem = function () {
     document.getElementById("text-input").value = '';
     //clear selected badges
     resetBadges();
+    toaster();
 };
 
 var deleteItem = function(element){
-    $(element).parent().fadeOut("slow");
+    $(element).parent().fadeOut(1000);
 }
 
 var completeItem = function(checked) {
@@ -67,8 +68,8 @@ var resetBadges = function(){
     $(".badge.badge-is-enabled").removeClass("badge-is-enabled");
 }
 
-////TODO create confirmation message when new item has been added
-//var toaster = function(){
-//    document.getElementById("toaster").style.height = "100%";
-//    
-//}
+//TODO create confirmation message when new item has been added
+var toaster = function(){
+    $("#itemAddedNotification").fadeIn(600);
+    $("#itemAddedNotification").delay(1000).fadeOut(3000);
+}

@@ -68,16 +68,16 @@ a.back {
 
 /*Badges individual colors*/
 #A {
-    background-color: #da88e0;
-    border-color: #da88e0;
+    background-color: #D157B6;
+    border-color: #D157B6;
 }
 #B {
-    background-color: #88c3e0;
-    border-color; #88c3e0;
+    background-color: #31B2AA;
+    border-color; #31B2AA;
 }
 #C {
-    background-color: #85bf56;
-    border-color: #85bf56;
+    background-color: #ED4C5F;
+    border-color: #ED4C5F;
 }
 #D {
     background-color: #6676d1;
@@ -86,8 +86,22 @@ a.back {
 
 /*Add Item Bar style*/
 #addItemsElements {
-    margin-top: 125px;
+    margin-top: 100px;
 }    
+
+#empty-fixed-height {
+    height: 35px;
+    margin-bottom: 30px;    
+}    
+
+    /*Item added notification style*/
+    #itemAddedNotification {
+        background-color: #85bf56;
+        color: white;
+        border-color: 2px solid #85bf56; 
+        padding: 15px;
+        display: none ;
+    }
 
     /*Text input*/
     #text-input {
@@ -106,17 +120,17 @@ a.back {
     /*Add Button style*/
     #add-button {
         background-color: white;
-        color: #4fb747;
-        border: 2px solid #4fb747; /* green */
+        color: dimgray;
+        border: 2px solid gray; /* gray */
         border-radius: 4px;
-        padding: 5px 30px;
+        padding: 5px 50px;
         font-family: "Verdana";
         font-size: 14px;
     }
 
     #add-button:active {
-        background-color: #4fb747; /* green */
-        border: 2px solid #4fb747; /* green */
+        background-color: #85bf56; /* green */
+        border: 2px solid #85bf56; /* green */
         color: white;
     }
 
@@ -180,12 +194,3 @@ a.list-group-item {
         color: darkgray;
         text-decoration:none;
     }
-    
-/*
-#toaster {
-    position: fixed;
-    height: 0;
-    width: 100%;
-    background-color: #b3efc2;
-    transition: .7s;
-}*/
