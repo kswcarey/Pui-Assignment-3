@@ -47,7 +47,7 @@ var closeOverlay = function (){
 //Restyles clicked badge and prepare it to be added to a new item
 var selectBadge = function(element){
     //when badge is clicked change styling of item
-    $(element).css("border-color", "red");
+    $(element).css('box-shadow', '3px 3px 5px #888');
     //append class of element to include "badge-is-enabled"
     $(element).addClass("badge-is-enabled");
 }
@@ -62,7 +62,7 @@ var removeOnClick = function(array){
 
 //resets badges to default styling and class
 var resetBadges = function(){
-    $(".badge.badge-is-enabled").css("border-color", "grey");
+    $(".badge.badge-is-enabled").css('box-shadow', '0px 0px 0px #888');
     //clear selected badges
     $(".badge.badge-is-enabled").removeClass("badge-is-enabled");
 }
